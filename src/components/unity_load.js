@@ -111,7 +111,7 @@ const UnityLoad: React = navigation => {
 
             <SizedBox height={8} />
 
-            <Text style={styles.subtitle}>Register A New Account</Text>
+            <Text style={styles.subtitle}>Unity Screen</Text>
           </KeyboardAvoidingView>
         </SafeAreaView>
       </View>
