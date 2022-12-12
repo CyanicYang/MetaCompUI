@@ -243,7 +243,7 @@ const NewMeeting: React = () => {
 
             <TouchableOpacity
               onPress={() => {
-                Alert.alert('https://metacomp/invite/31002');
+                Alert.alert('https://metacomp/invite/10002');
               }}>
               <View style={styles.button}>
                 <Text style={styles.buttonTitle}>

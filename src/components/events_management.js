@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import {
   Alert,
   Keyboard,
@@ -20,7 +20,7 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
-} from 'react-native';
+} from "react-native";
 
 import SizedBox from './SizedBox';
 
@@ -104,7 +104,7 @@ function useStyles() {
   });
 }
 
-const ResetPage: React = () => {
+const EventsManagement: React = () => {
   const navigation = useNavigation();
 
   const styles = useStyles();
@@ -150,66 +150,13 @@ const ResetPage: React = () => {
 
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate('NewMeeting');
+                navigation.navigate('UnityLoad');
               }}>
               <View style={styles.button}>
-                <Text style={styles.buttonTitle}>Create New Meeting</Text>
+                <Text style={styles.buttonTitle}>Start Meeting</Text>
               </View>
             </TouchableOpacity>
-
-            <SizedBox height={16} />
-
-            <View style={styles.container}>
-              <TouchableOpacity onPress={showDialog}>
-                <View style={styles.button}>
-                  <Text style={styles.buttonTitle}>Join Meeting</Text>
-                </View>
-              </TouchableOpacity>
-              <Dialog.Container visible={dialogVisible}>
-                <Dialog.Title>Enter the Link</Dialog.Title>
-                <Pressable onPress={() => emailInput.current?.focus()}>
-                  <View style={styles.form}>
-                    <Text style={styles.label}>link</Text>
-
-                    <Controller
-                      control={control}
-                      name="email"
-                      render={({onBlur, onChange, value}) => (
-                        <TextInput
-                          autoCapitalize="none"
-                          autoCompleteType="email"
-                          autoCorrect={false}
-                          keyboardType="email-address"
-                          onBlur={onBlur}
-                          onChangeText={onChange}
-                          onSubmitEditing={() => passwordInput.current?.focus()}
-                          ref={emailInput}
-                          returnKeyType="next"
-                          style={styles.textInput}
-                          textContentType="username"
-                          value={value}
-                        />
-                      )}
-                    />
-                  </View>
-                </Pressable>
-                <Dialog.Button label="Cancel" onPress={handleCancel} />
-                <Dialog.Button label="Submit" onPress={handleDelete} />
-              </Dialog.Container>
-            </View>
-
-            <SizedBox height={16} />
-
-            <TouchableOpacity
-              onPress={() => {
-                navigation.navigate('EventsManagement');
-              }}>
-              <View style={styles.button}>
-                <Text style={styles.buttonTitle}>
-                  Meeting Events Management
-                </Text>
-              </View>
-            </TouchableOpacity>
+            <Text style={styles.subtitle}>Date: 08/12/2020 10:30 AM</Text>
           </KeyboardAvoidingView>
         </SafeAreaView>
       </View>
@@ -217,4 +164,4 @@ const ResetPage: React = () => {
   );
 };
 
-export default ResetPage;
+export default EventsManagement;

@@ -17,6 +17,8 @@ import ResetPage from './src/components/reset_password';
 import NewAccountPage from './src/components/new_account';
 import darkTheme from '@react-navigation/native/src/theming/DarkTheme';
 import NewMeeting from './src/components/new_meeting';
+import EventsManagement from './src/components/events_management';
+import UnityLoad from './src/components/unity_load';
 
 const App: React = navigation => {
   const Stack = createNativeStackNavigator();
@@ -29,6 +31,8 @@ const App: React = navigation => {
         <Stack.Screen name="ResetPage" component={ResetPage} />
         <Stack.Screen name="NewAccountPage" component={NewAccountPage} />
         <Stack.Screen name="NewMeeting" component={NewMeeting} />
+        <Stack.Screen name="EventsManagement" component={EventsManagement} />
+        <Stack.Screen name="UnityLoad" component={UnityLoad} />
       </Stack.Navigator>
     </NavigationContainer>
   );
